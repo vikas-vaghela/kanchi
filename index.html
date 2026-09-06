@@ -19,19 +19,19 @@
     <!-- Header Section -->
     <header class="border-b border-stone-200 bg-white sticky top-0 z-40 shadow-sm">
         
-        <!-- Top Row -->
-        <div class="max-w-7xl mx-auto px-4 py-6 sm:py-4 flex items-center justify-between relative">
+        <!-- Top Row with a much larger header height/padding specifically for mobile -->
+        <div class="max-w-7xl mx-auto px-4 py-10 sm:py-4 flex items-center justify-between relative">
             
             <!-- Mobile Hamburger Menu Button (Left side) -->
             <button onclick="toggleMobileMenu()" class="lg:hidden text-stone-700 focus:outline-none p-1 z-20">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
                 </svg>
             </button>
 
-            <!-- Logo: Mobile par bada aur exact centered, Laptop par Home button ke barabar right-shifted -->
+            <!-- Logo: Mobile par centered, Laptop par Home button ke barabar right-shifted -->
             <div class="absolute inset-0 flex items-center justify-center lg:static lg:inset-auto lg:translate-x-0 pl-0 lg:pl-16 z-10 pointer-events-none">
-                <img src="kanchi logo2.jpg" alt="Kanchi Logo" class="h-24 sm:h-28 lg:h-36 object-contain pointer-events-auto" onerror="this.src='https://i.imgur.com/8Xj3vNq.png'">
+                <img src="kanchi logo2.jpg" alt="Kanchi Logo" class="h-24 sm:h-24 lg:h-36 object-contain pointer-events-auto" onerror="this.src='https://i.imgur.com/8Xj3vNq.png'">
             </div>
 
             <!-- Middle Side: Search Bar (Mobile par hidden, Laptop par visible) -->

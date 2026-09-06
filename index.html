@@ -23,19 +23,19 @@
         <div class="max-w-7xl mx-auto px-4 py-6 sm:py-4 flex items-center justify-between relative">
             
             <!-- Mobile Hamburger Menu Button (Left side) -->
-            <button onclick="toggleMobileMenu()" class="lg:hidden text-stone-700 focus:outline-none p-1 z-10">
+            <button onclick="toggleMobileMenu()" class="lg:hidden text-stone-700 focus:outline-none p-1 z-20">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
                 </svg>
             </button>
 
-            <!-- Logo: Mobile par aur bada & centered, Laptop par Home button ke barabar right-shifted (pl-12 lg:pl-16) -->
-            <div class="absolute left-1/2 -translate-x-1/2 lg:static lg:translate-x-0 flex items-center pl-12 lg:pl-16">
-                <img src="kanchi logo2.jpg" alt="Kanchi Logo" class="h-20 sm:h-24 lg:h-36 object-contain" onerror="this.src='https://i.imgur.com/8Xj3vNq.png'">
+            <!-- Logo: Mobile par bada aur exact centered, Laptop par Home button ke barabar right-shifted -->
+            <div class="absolute inset-0 flex items-center justify-center lg:static lg:inset-auto lg:translate-x-0 pl-0 lg:pl-16 z-10 pointer-events-none">
+                <img src="kanchi logo2.jpg" alt="Kanchi Logo" class="h-24 sm:h-28 lg:h-36 object-contain pointer-events-auto" onerror="this.src='https://i.imgur.com/8Xj3vNq.png'">
             </div>
 
             <!-- Middle Side: Search Bar (Mobile par hidden, Laptop par visible) -->
-            <div class="hidden lg:flex flex-1 max-w-2xl mx-4">
+            <div class="hidden lg:flex flex-1 max-w-2xl mx-4 z-20">
                 <div class="flex w-full border border-stone-300 rounded overflow-hidden">
                     <select class="bg-stone-50 px-3 text-xs sm:text-sm text-stone-600 border-r border-stone-300 focus:outline-none">
                         <option>All Category</option>
@@ -50,7 +50,7 @@
             </div>
 
             <!-- Right Side: Cart Icon (Mobile par hidden, Laptop par visible) -->
-            <div class="hidden lg:flex items-center z-10">
+            <div class="hidden lg:flex items-center z-20">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-stone-700 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
                 </svg>

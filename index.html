@@ -19,19 +19,19 @@
     <!-- Header Section -->
     <header class="border-b border-stone-200 bg-white sticky top-0 z-40 shadow-sm">
         
-        <!-- Top Row with bigger header size/padding for mobile -->
-        <div class="max-w-7xl mx-auto px-4 py-5 sm:py-3 flex items-center justify-between relative">
+        <!-- Top Row -->
+        <div class="max-w-7xl mx-auto px-4 py-6 sm:py-4 flex items-center justify-between relative">
             
             <!-- Mobile Hamburger Menu Button (Left side) -->
             <button onclick="toggleMobileMenu()" class="lg:hidden text-stone-700 focus:outline-none p-1 z-10">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
                 </svg>
             </button>
 
-            <!-- Logo: Mobile par reference photo jaisi exact size aur centered, Laptop par left -->
-            <div class="absolute left-1/2 -translate-x-1/2 lg:static lg:translate-x-0 flex items-center">
-                <img src="kanchi logo2.jpg" alt="Kanchi Logo" class="h-16 sm:h-20 lg:h-32 object-contain" onerror="this.src='https://i.imgur.com/8Xj3vNq.png'">
+            <!-- Logo: Mobile par aur bada & centered, Laptop par Home button ke barabar right-shifted (pl-12 lg:pl-16) -->
+            <div class="absolute left-1/2 -translate-x-1/2 lg:static lg:translate-x-0 flex items-center pl-12 lg:pl-16">
+                <img src="kanchi logo2.jpg" alt="Kanchi Logo" class="h-20 sm:h-24 lg:h-36 object-contain" onerror="this.src='https://i.imgur.com/8Xj3vNq.png'">
             </div>
 
             <!-- Middle Side: Search Bar (Mobile par hidden, Laptop par visible) -->

@@ -4,36 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kanchi - The Ethnic Studio</title>
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Razorpay Checkout Script -->
     <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 </head>
 <body class="bg-white text-stone-800 font-sans">
 
+    <!-- Top Announcement Bar -->
     <div class="bg-[#b49b8d] text-white text-xs sm:text-sm text-center py-2 font-medium tracking-wider">
         INDO WESTERN | GOWNS | CHANIYA CHOLI | DRESSES | KURTIS
     </div>
 
+    <!-- Header Section -->
     <header class="border-b border-stone-200 bg-white sticky top-0 z-40 shadow-sm">
         
-        <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between gap-2 relative">
+        <!-- Top Row with increased header padding for mobile -->
+        <div class="max-w-7xl mx-auto px-4 py-4 sm:py-3 flex items-center justify-between relative">
             
+            <!-- Mobile Hamburger Menu Button (Left side) -->
             <button onclick="toggleMobileMenu()" class="lg:hidden text-stone-700 focus:outline-none p-1 z-10">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
                 </svg>
             </button>
 
-            <div class="absolute left-1/2 -translate-x-1/2 lg:static lg:translate-x-0 flex items-center pl-2 sm:pl-8">
-                <img src="kanchi logo2.jpg" alt="Kanchi Logo" class="h-24 sm:h-32 lg:h-32 object-contain" onerror="this.src='https://i.imgur.com/8Xj3vNq.png'">
+            <!-- Logo: Mobile par reference photo jaisa clean & centered, Laptop par left -->
+            <div class="absolute left-1/2 -translate-x-1/2 lg:static lg:translate-x-0 flex items-center">
+                <img src="kanchi logo2.jpg" alt="Kanchi Logo" class="h-14 sm:h-20 lg:h-32 object-contain" onerror="this.src='https://i.imgur.com/8Xj3vNq.png'">
             </div>
 
-            <div class="hidden lg:flex flex-1 max-w-2xl mx-2 sm:mx-4">
+            <!-- Middle Side: Search Bar (Mobile par hidden, Laptop par visible) -->
+            <div class="hidden lg:flex flex-1 max-w-2xl mx-4">
                 <div class="flex w-full border border-stone-300 rounded overflow-hidden">
                     <select class="bg-stone-50 px-3 text-xs sm:text-sm text-stone-600 border-r border-stone-300 focus:outline-none">
                         <option>All Category</option>
                     </select>
                     <input type="text" placeholder="Search Gowns, Chaniya Choli, Kurtis..." class="w-full px-3 py-2 text-xs sm:text-sm focus:outline-none">
-                    <button class="bg-[#b49b8d] text-white px-3 sm:px-5 flex items-center justify-center hover:opacity-90">
+                    <button class="bg-[#b49b8d] text-white px-5 flex items-center justify-center hover:opacity-90">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
                         </svg>
@@ -41,6 +49,7 @@
                 </div>
             </div>
 
+            <!-- Right Side: Cart Icon (Mobile par hidden, Laptop par visible) -->
             <div class="hidden lg:flex items-center z-10">
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-stone-700 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
@@ -49,6 +58,7 @@
 
         </div>
 
+        <!-- Menu Row: Laptop par hamesha dikhega, mobile par sirf button dabane par khulega -->
         <div id="mobile-menu" class="hidden lg:block border-t border-stone-200 bg-[#fbf7f5]">
             <div class="max-w-7xl mx-auto px-4 sm:px-8 flex flex-col lg:flex-row justify-start space-y-1 lg:space-y-0 lg:space-x-1 py-2 lg:py-0 text-sm font-medium text-stone-700">
                 <a href="#" class="bg-[#b49b8d] text-white px-6 py-2.5 font-semibold block">Home</a>
@@ -59,6 +69,7 @@
         </div>
     </header>
 
+    <!-- Size Selector Bar -->
     <div class="max-w-7xl mx-auto px-4 my-6">
         <div class="border border-stone-300 rounded p-3 flex justify-between items-center text-stone-600 bg-stone-50 cursor-pointer max-w-xs">
             <span class="text-sm">Select Your Size</span>
@@ -68,9 +79,11 @@
         </div>
     </div>
 
+    <!-- Product Grid Section -->
     <main class="max-w-7xl mx-auto px-4 mb-12">
         <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             
+            <!-- Product 1 (photo5.jpg) -->
             <div class="group cursor-pointer" onclick="payWithRazorpay('Designer Pink Sharara Set', 2850)">
                 <div class="overflow-hidden bg-stone-100 aspect-[3/4] mb-2 rounded flex items-center justify-center p-2">
                     <img src="photo5.jpg" alt="Sharara Set" class="w-full h-full object-contain group-hover:scale-105 transition duration-300">
@@ -79,6 +92,7 @@
                 <p class="text-stone-900 font-semibold text-sm sm:text-base">₹ 2850</p>
             </div>
 
+            <!-- Product 2 (photo6.jpg) -->
             <div class="group cursor-pointer" onclick="payWithRazorpay('Traditional Green Gharara Set', 2850)">
                 <div class="overflow-hidden bg-stone-100 aspect-[3/4] mb-2 rounded flex items-center justify-center p-2">
                     <img src="photo6.jpg" alt="Gharara Set" class="w-full h-full object-contain group-hover:scale-105 transition duration-300">
@@ -87,6 +101,7 @@
                 <p class="text-stone-900 font-semibold text-sm sm:text-base">₹ 2850</p>
             </div>
 
+            <!-- Product 3 (photo7.jpg) -->
             <div class="group cursor-pointer" onclick="payWithRazorpay('Lavender Party Wear Kurti Set', 2850)">
                 <div class="overflow-hidden bg-stone-100 aspect-[3/4] mb-2 rounded flex items-center justify-center p-2">
                     <img src="photo7.jpg" alt="Kurti Set" class="w-full h-full object-contain group-hover:scale-105 transition duration-300">
@@ -95,6 +110,7 @@
                 <p class="text-stone-900 font-semibold text-sm sm:text-base">₹ 2850</p>
             </div>
 
+            <!-- Product 4 (photo8.jpg) -->
             <div class="group cursor-pointer" onclick="payWithRazorpay('Royal Maroon Festive Suit', 2850)">
                 <div class="overflow-hidden bg-stone-100 aspect-[3/4] mb-2 rounded flex items-center justify-center p-2">
                     <img src="photo8.jpg" alt="Festive Suit" class="w-full h-full object-contain group-hover:scale-105 transition duration-300">
@@ -105,6 +121,7 @@
 
         </div>
 
+        <!-- Pagination -->
         <div class="flex justify-center items-center space-x-1 sm:space-x-2 my-10 overflow-x-auto py-2">
             <span class="px-3 py-1 border border-stone-300 text-stone-400 text-sm">‹</span>
             <span class="px-3 py-1 bg-[#b49b8d] text-white text-sm font-medium">1</span>
@@ -116,6 +133,7 @@
             <span class="px-3 py-1 border border-stone-300 text-stone-700 text-sm">›</span>
         </div>
 
+        <!-- Features Banner -->
         <div class="border-t border-b border-stone-200 py-8 my-10 bg-stone-50">
             <div class="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
                 
@@ -155,6 +173,7 @@
         </div>
     </main>
 
+    <!-- Invoice Modal -->
     <div id="invoice-modal" class="hidden fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
         <div class="bg-white p-6 sm:p-8 rounded-lg shadow-2xl max-w-md w-full relative">
             <div class="text-center border-b pb-4 mb-4">
@@ -187,6 +206,7 @@
         </div>
     </div>
 
+    <!-- Footer with Card Address -->
     <footer class="bg-[#fbf7f5] text-stone-700 pt-10 pb-6 border-t border-stone-200 text-sm">
         <div class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
             <div>
@@ -228,6 +248,7 @@
         </div>
     </footer>
 
+    <!-- Script -->
     <script>
         function toggleMobileMenu() {
             var menu = document.getElementById('mobile-menu');
